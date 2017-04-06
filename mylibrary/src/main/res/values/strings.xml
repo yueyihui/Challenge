@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Transformers;</string>
+    <string name="location_title">Location</string>
+    <string name="address_title">Address</string>
+</resources>
