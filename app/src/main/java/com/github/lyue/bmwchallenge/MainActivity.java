@@ -53,7 +53,18 @@ public class MainActivity extends AppCompatActivity implements TransformTool, Ge
         initLocationLoader();
         initRecyclerView();
         restoreState(savedInstanceState);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         UpstreamNetworkMonitor.registerNetworkMonitor(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        UpstreamNetworkMonitor.unregisterNetworkMonitor(this);
     }
 
     private void initLocationLoader() {
